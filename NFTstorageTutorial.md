@@ -86,4 +86,16 @@ Now you know why you want to store your NFT metadata using IPFS and Filecoin but
 
 [Fleek] (link to Fleek docs) is a CI/CD tool you can use to deploy your apps for free as simply and easily as you would with some of the web2 tools you might be familiar with like Netlify or Vercel. Fleek uses IPFS to host your site or app and even offers ENS domain routing on their platform.
 
+## NFT Demo
 
+It’s the part we’ve all been waiting for: let’s build something! The tech stack for this demo includes:
+
+- Solidity (via Open Zeppelin smart contracts)
+- React (front end)
+- Ethers (React-JS client for web3)
+- Hardhat (dev tool)
+- Moralis (for contract calling & multi-chain deployments)
+- NFT.Storage (IPFS CID creation and Filecoin metadata storage)
+- Fleek (front-end deployment to the web on IPFS & Filecoin)
+- MetaMask (ALWAYS use a NEW Wallet for testing - NEVER use wallets with real assets in them)
+- Node installed

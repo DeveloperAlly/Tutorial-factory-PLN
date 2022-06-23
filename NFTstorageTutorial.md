@@ -90,12 +90,26 @@ Now you know why you want to store your NFT metadata using IPFS and Filecoin but
 
 It’s the part we’ve all been waiting for: let’s build something! The tech stack for this demo includes:
 
-- Solidity (via Open Zeppelin smart contracts)
-- React (front end)
-- Ethers (React-JS client for web3)
-- Hardhat (dev tool)
-- Moralis (for contract calling & multi-chain deployments)
-- NFT.Storage (IPFS CID creation and Filecoin metadata storage)
-- Fleek (front-end deployment to the web on IPFS & Filecoin)
-- MetaMask (ALWAYS use a NEW Wallet for testing - NEVER use wallets with real assets in them)
-- Node installed
+[comment]: # (TODO: links to docs for each)
+
+- [Solidity] (link) (via Open Zeppelin smart contracts)
+- [React] (link to docs) (front end)
+- [Ethers] (link to docs) (React-JS client for web3)
+- [Hardhat] (link to docs) (dev tool)
+- [Moralis] (link to docs) (for contract calling & multi-chain deployments)
+- [NFT.Storage] (link to docs) (IPFS CID creation and Filecoin metadata storage)
+- [Fleek] (link to docs) (front-end deployment to the web on IPFS & Filecoin)
+- [MetaMask] (link to docs) (ALWAYS use a NEW Wallet for testing - NEVER use wallets with real assets in them)
+- [Node] (link to docs) installed
+
+[comment]: # (TODO: links to GH repos)
+
+The full GitHub code repo is [here] (link to repo). You can view the ReadMe and Quickstart guide here.
+
+For this demonstration, we’ve created a small dynamically minted NFT project with the option of using the Open Zeppelin ERC-721 or ERC-1155 smart contract and leveraging NFT.storage; a devtool which does the heavy lifting of IPFS and Filecoin for us and is designed specifically for NFTs. Dynamically minting the NFT just means that we aren’t creating/minting the NFT until the contract is called. This contract call could come from your website front end or in-game logic like a player leveling up or similar. You can deploy these contracts to any EVM-compatible chain including Polygon, AVAX, BSC or, of course, Ethereum.
+
+If you are taking the build it from scratch approach, follow these steps:
+
+:rocket: Install and create either a NextJS app or React app
+
+```npx create-next-app@latest``` or ```npx create-react-app[projectName]```

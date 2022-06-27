@@ -10,15 +10,11 @@
 
 This workshop will provide a brief introduction to IPFS and Filecoin. We will then dive into making an NFT using IPFS and FIlecoin to store the metadata persistently and immutably to protect the value of your digital assets over time. Before we are through, we will walk through all the code you need to create your very own immutable NFTs using NFT.storage to upload and store your metadata.
 
-[comment]: # (TODO: link needed)
-
 TL; DR: If you are already familiar with IPFS & Filecoin, you can jump straight to the coding demo [here](#demo)
 
 First, let’s clear up any confusion that may be out there around a few names you’ve probably heard floating around the web3 ecosystem and how they fit together. You have probably heard of Protocol Labs, IPFS, Filecoin, and the Filecoin Foundation. Many times these names are used interchangeably and, while they are all tightly affiliated, they are all actually separate organizations.
 
-[comment]: # (TODO: infographic showing PL, FF, F, & IPFS logos & relationships)
-
-![Infographic showing relationships between Protocol Labs, Filecoin Foundation, Filecoint, & IPFS](https://www.markdownguide.org/assets/images/tux.png)
+![Infographic showing relationships between Protocol Labs, Filecoin Foundation, Filecoint, & IPFS](https://ipfs.io/ipfs/bafybeibix67vqxoama6ekiy4mmex67pdf5p63c2jwxzgss5p4sf7src7ai/PLrelationships.jpg)
 
 ### Protocol Labs
 

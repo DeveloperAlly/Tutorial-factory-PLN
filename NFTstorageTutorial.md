@@ -12,7 +12,7 @@ This workshop will provide a brief introduction to IPFS and Filecoin. We will th
 
 [comment]: # (TODO: link needed)
 
-TL; DR: If you are already familiar with IPFS & Filecoin, you can jump straight to the coding demo [here](#NFT Demo)
+TL; DR: If you are already familiar with IPFS & Filecoin, you can jump straight to the coding demo [here](#demo)
 
 First, let’s clear up any confusion that may be out there around a few names you’ve probably heard floating around the web3 ecosystem and how they fit together. You have probably heard of Protocol Labs, IPFS, Filecoin, and the Filecoin Foundation. Many times these names are used interchangeably and, while they are all tightly affiliated, they are all actually separate organizations.
 
@@ -86,7 +86,7 @@ Now you know why you want to store your NFT metadata using IPFS and Filecoin but
 
 [Fleek] (link to Fleek docs) is a CI/CD tool you can use to deploy your apps for free as simply and easily as you would with some of the web2 tools you might be familiar with like Netlify or Vercel. Fleek uses IPFS to host your site or app and even offers ENS domain routing on their platform.
 
-## NFT Demo
+## <h2 id="demo"> NFT Demo </h2>
 
 It’s the part we’ve all been waiting for: let’s build something! The tech stack for this demo includes:
 

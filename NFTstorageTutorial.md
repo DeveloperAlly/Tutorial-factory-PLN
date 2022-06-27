@@ -12,7 +12,7 @@ This workshop will provide a brief introduction to IPFS and Filecoin. We will th
 
 [comment]: # (TODO: link needed)
 
-*TL; DR: If you are already familiar with IPFS & Filecoin, you can jump straight to the coding demo [here] (link to demo section in this doc)*
+TL; DR: If you are already familiar with IPFS & Filecoin, you can jump straight to the coding demo [here](#NFT Demo)
 
 First, let’s clear up any confusion that may be out there around a few names you’ve probably heard floating around the web3 ecosystem and how they fit together. You have probably heard of Protocol Labs, IPFS, Filecoin, and the Filecoin Foundation. Many times these names are used interchangeably and, while they are all tightly affiliated, they are all actually separate organizations.
 
@@ -210,6 +210,7 @@ Note: NETWORK = localhost or any in the config file
 ```
 npx hardhat verify –network NETWORK DEPLOYED_CONTRACT_ADDRESS
 ```
+
 Note: NETWORK = localhost or any in the config file; DEPLOYED_CONTRACT_ADDRESS = the blockchain address of your deployed contract
 
 ## IPFS & Filecoin: Resources & Getting Involved
@@ -234,7 +235,7 @@ Note: NETWORK = localhost or any in the config file; DEPLOYED_CONTRACT_ADDRESS =
 - Ambassador program (Orbit community program)
 - Protocol Labs Launchpad (for those looking to become part of the business ecosystem)
 
-### Get in touch! 
+### Get in touch
 
 - Ally Haire: Developer Advocate [Twitter](<https://twitter.com/DeveloperAlly>)
 

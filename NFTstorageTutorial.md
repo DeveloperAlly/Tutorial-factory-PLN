@@ -129,27 +129,19 @@ ERC721 is perfectly fine for creating a basic NFT and when this demo was first c
 
 ![Image showing code to import contract dependencies into VS Code](<https://ipfs.io/ipfs/bafybeibsfviml2aefiq4ngzuyckjiavatbo7vlkm5yl32mv4zslsmpkvnm/importContractDepends.jpg>)
 
-[comment]: # (TODO: link to tokenURI resources)
-
-The ERC1155 contract is missing a tokenURI function out of the box so you will need to override the URI. You can read about how to do this [here] (link) or watch a video [here] (link). You will also want to add a mapping for your TokenURIs.
+The ERC1155 contract is missing a tokenURI function out of the box so you will need to override the URI. You can read about how to do this [here](https://forum.openzeppelin.com/t/how-to-erc-1155-id-substitution-for-token-uri/3312/16) or watch a video [here](https://www.youtube.com/watch?app=desktop&v=19SSvs32m8I). You will also want to add a mapping for your TokenURIs.
 
 :rocket: Mapping:
 
-[comment]: # (TODO: add mapping screenshot)
-
-![Image showing code for mapping TokenURI](https://www.markdownguide.org/assets/images/tux.png)
+![Image showing code for mapping TokenURI](<https://ipfs.io/ipfs/bafybeib6kq72wkgzseeda2h4ecm2shc3hnfe2k5est4xlzxw76igrglcoq/mapping.jpg>)
 
 :rocket: TokenURI override:
 
-[comment]: # (TODO: add tokenURIoverride screenshot)
-
-![Image showing code for overriding TokenURI](https://www.markdownguide.org/assets/images/tux.png)
+![Image showing code for overriding TokenURI](<https://ipfs.io/ipfs/bafybeicans6gytwkd4xpa3m3ku2hrkmin6ki26ajejmveix6nzysr5ania/tokenURIoverride.jpg>)
 
 :rocket: Creating NFT Metadata with NFT.Storage
 
-[comment]: # (TODO: add saveToNFTStorage screenshot)
-
-![Image showing code for creating NFT metadata with NFT.Storage](https://www.markdownguide.org/assets/images/tux.png)
+![Image showing code for creating NFT metadata with NFT.Storage](<https://ipfs.io/ipfs/bafybeia3vpbrrfwls7yvp4pnmn6nakjzfjkttjlfwbl3uhbq4ruecs4mti/saveToNFTStorage.jpg>)
 
 :rocket: For ease of flow I suggest testing your contracts on Remix first. You can also import Solidity debuggers into your IDE of choice.
 
@@ -173,25 +165,23 @@ Note: NETWORK = localhost or any in the config file; DEPLOYED_CONTRACT_ADDRESS =
 
 ## IPFS & Filecoin: Resources & Getting Involved
 
-[comment]: # (TODO: link to resources in these two sections)
-
 ### Learn
 
-- Proto.school
-- NFTschool.dev
-- Docs
-- YouTube
+- [Proto.school](https://proto.school/)
+- [NFTschool.dev](https://nftschool.dev/)
+- [Docs](https://docs.filecoin.io/)
+- [YouTube](https://www.youtube.com/c/FilecoinProject)
 
 ### Contributions & Grants
 
-- Hackathons.filecoin.io
-- Grants (microgrants, project grants, bounties)
-- Projects and repos are open source
+- [Hackathons.filecoin.io](https://hackathons.filecoin.io/)
+- [Grants](https://github.com/filecoin-project/devgrants) (microgrants, project grants, bounties)
+- Projects and [repos](https://github.com/filecoin-project) are open source
 
 ### Join the Community
 
-- Ambassador program (Orbit community program)
-- Protocol Labs Launchpad (for those looking to become part of the business ecosystem)
+- [Ambassador](https://orbit.love/community) program (Orbit community program)
+- Protocol Labs [Launchpad](https://boards.greenhouse.io/protocollabs/jobs/4305898004) (for those looking to become part of the business ecosystem)
 
 ### Get in touch
 

@@ -110,6 +110,64 @@ For this demonstration, we’ve created a small dynamically minted NFT project w
 
 If you are taking the build it from scratch approach, follow these steps:
 
-:rocket: Install and create either a NextJS app or React app
+:rocket: In your terminal, install and create either a NextJS app or React app
 
 ```npx create-next-app@latest``` or ```npx create-react-app[projectName]```
+
+:rocket: Navigate to your app
+
+```cd [projectName]``` and rename the README.md file (ex. README_React.md)
+
+:rocket: Still in the terminal, install and make a Hardhat project
+```npm install –save-dev hardhat```
+```npx hardhat```
+
+- Choose create a basic sample project and say yes to all the questions
+- Rename the README.md file (ex. README_Hardhat.md)
+
+:rocket: Install dotenv and create .env file
+```npm install dotenv```
+```touch.env```
+
+[comment]: # (TODO: link to Moralis docs)
+
+:rocket: Create a server for the smart contracts as per the [Moralis] (link to docs) documentation. We’ve used Moralis so we can deploy to multiple EVM-compatible chains and can use their React hooks. Other options are Chainstack, Alchemy, Infura, and Quicknode.
+
+[comment]: # (TODO: add graphic Moralis screenshot)
+
+![Image showing user interface to create a new server on Moralis](https://www.markdownguide.org/assets/images/tux.png)
+
+[comment]: # (TODO: link to GH .env.example)
+
+:rocket: Add your .env variables as per [.env.example] (GH link) We will add the deployed contract ones later so you can leave these blank for now.
+
+[comment]: # (TODO: link to HH config docs & sample hardhat.config.js file)
+
+:rocket: Create your [hardhat.config] (HH config docs link) file per [hardhat.config.js] (HH config example file link from repo) example.
+
+[comment]: # (TODO: link to Remix docs)
+
+:rocket: Time to make our contract and test it on [Remix](link to Remix docs)!
+
+- In the terminal, install some more dependencies:
+
+```npm install @openzeppelin/contracts @nomiclabs/hardhat-etherscan```
+
+[comment]: # (TODO: link to OZ docs)
+
+- We don’t need to write a smart contract from scratch when using EVM-compatible chains. We can use a template library provided by [OpenZeppelin] (link to docs) which is security audited and community tested.
+
+A note on ERC standards: The original standard template for NFTs was defined in the Ethereum Improvement Proposal ERC-721. EIPs describe the standards for the Ethereum platform like core protocol specs, client APIs and contract standards. Many chains also have their own versions of Improvement Proposals (like FIP - Filecoin Improvement Proposal). An improvement proposal is "proposed" by the community - this could be core dev's, members of the ecosystem or anyone in the world. The community then discusses this proposal and it then goes through a process of approval which generally includes an auditing review also. ERC's on the other hand are Ethereum Request for Comments. It's a weird name leftover from an original developer draft proposal, that basically means it's related to a specific category of EIPs that work on the application level (ie. it means that it's not a core function of the chain's code and doesn't need to be adopted by all participants). 
+
+[comment]: # (TODO: link to EIP1155, link to OZ ERC1155, link to Stack Overflow)
+
+ERC721 is perfectly fine for creating a basic NFT and when this demo was first created - it was the only one available. However, there's recently been a new proposal that is a multi token standard called [EIP1155] (link to EIP1155). This standard proposes the ability to create NFTs and fungible tokens in one contract and adds some cool new features like batch minting to NFTs. While I don't need either of these new features for this demo, I'm choosing to use OpenZeppelin's ERC1155 [template] (link to OZ template) because of the gas optimisations it provides due to it's more efficient method for data storage (see [this] (link to SO) great write up on Eth StackOverflow) and also because who knows where this project might go - maybe we'll want to add fungible tokens at some point?
+
+:rocket: create a file for a new Solidity smart contract called FilGoodNFT.sol
+
+:rocket: Import the ERC1155 contract. We’re also going to use a debugger tool from Hardhat that will give us the ability to console.log variables and a counter utility library from OpenZeppelin that will allow us to give the NFTs individual numbers easily
+
+```import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
+  import "@openzeppelin/contracts/utils/Counters.sol";
+  import "hardhat/console.sol";```
+

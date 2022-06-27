@@ -22,11 +22,7 @@ Founded in 2013 by Juan Benet, Protocol Labs is a fully distributed open-source 
 
 ### IPFS (InterPlanetary File System)
 
-[comment]: # (TODO: link to IPFS docs)
-
-[IPFS] (link to IPFS docs) is more than just a cool, futuristic name. As a distributed, peer to peer network for files and folders, it was designed to be able to work even when the network is between planets! IPFS uses cryptography to address content by what it is instead of where it is. This creates the ability to retrieve content from the peer closest to you. If we were all hanging out in our shiny, new Mars colony, we could request files from each other quickly rather than waiting for signals to travel to centralized servers back on Earth and then back to us. IPFS is distributed and decentralized by design , has no central authority servers for censorship resistance, is designed to be offline first for resilience, and provides trustless verifiability of stored data through cryptographic hashes called Content IDs (CIDs).
-
-[comment]: # (TODO: infographic showing same CID = same content)
+[IPFS](https://docs.filecoin.io/) is more than just a cool, futuristic name. As a distributed, peer to peer network for files and folders, it was designed to be able to work even when the network is between planets! IPFS uses cryptography to address content by what it is instead of where it is. This creates the ability to retrieve content from the peer closest to you. If we were all hanging out in our shiny, new Mars colony, we could request files from each other quickly rather than waiting for signals to travel to centralized servers back on Earth and then back to us. IPFS is distributed and decentralized by design , has no central authority servers for censorship resistance, is designed to be offline first for resilience, and provides trustless verifiability of stored data through cryptographic hashes called Content IDs (CIDs).
 
 ![Infographic showing relationship between CID and data content](https://ipfs.io/ipfs/bafybeicf5damu4pubbt5du2ljixkvv4ybetmdf5nnnkhuvpityj26jf7ya/CIDcontent.jpg)
 
@@ -38,23 +34,17 @@ A peer to peer network is only useful if you have a healthy number of distribute
 
 ### Filecoin Foundation
 
-[comment]: # (TODO: link to FF docs)
-
-The Filecoin [Foundation] (link to FF docs) is the steward of the Filecoin community, aspiring to put the power of humanity’s most important information back into the hands of everyone. The foundation provides resources, guidance, and fair, equitable principles to help the ecosystem flourish, and to open up the internet for a safer, stronger, and more reliable environment where everyone can thrive.
+The Filecoin [Foundation](https://fil.org/) is the steward of the Filecoin community, aspiring to put the power of humanity’s most important information back into the hands of everyone. The foundation provides resources, guidance, and fair, equitable principles to help the ecosystem flourish, and to open up the internet for a safer, stronger, and more reliable environment where everyone can thrive.
 
 ## NFT Use Case
 
 Whether you want to use the ERC-721 token standard, or the more recently released ERC-1155 multi-token standard, a best practice approach is to leverage the community vetted, security audited, open-sourced smart contracts available through Open Zeppelin. Open Zeppelin has a range of standard implementations and utility contracts and libraries that are used widely by the community to create NFTs on any ethereum compatible chains.
 
-[comment]: # (TODO: add graphic GameItem contract from OZ)
-
-![Image showing sample Open Zeppelin ERC721 contract](https://www.markdownguide.org/assets/images/tux.png)
+![Image showing sample Open Zeppelin ERC721 contract](https://ipfs.io/ipfs/bafybeieosegiifyat7srdathtbhluvcxz7wh4zyzrh44qplugl6qzrgwre/OZERC721.jpg)
 
 The main function we want to look at here is the mint and setTokenURI functions though. If we look at this example contract implementation, we can see that this contract creates a numbered ID GameItem for a player (with a wallet address) and takes a tokenURI (or Universal resource identifier) as a parameter. This is where it gets interesting, because the tokenURI is simply a JSON object containing the unique characteristics of the NFT - Thor’s hammer in this example.
 
-[comment]: # (TODO: add graphic tokenURI JSON example)
-
-![Image showing tokenURI JSON document](https://www.markdownguide.org/assets/images/tux.png)
+![Image showing tokenURI JSON document](https://ipfs.io/ipfs/bafybeihc24s6y3jzixgzf7auhp22uwoalrwgylrscwaixjkl6xqtbxxosu/ThorHammer.jpg)
 
 What’s important is that we really want to ensure that our metadata conforms to the characteristics we’re looking for in our NFT - particularly its non-fungibility and uniqueness . So where and how we save this metadata is an important consideration.
 
@@ -66,41 +56,31 @@ Now you know why you want to store your NFT metadata using IPFS and Filecoin but
 
 ### NFT.storage
 
-[comment]: # (TODO: link to NFT.storage docs)
-
-[NFT.storage] (link to NFT.storage docs) was created as a public good to archive and persist NFT data. It creates an IPFS CID for your NFT metadata and then makes an automatic deal to store this content persistently on Filecoin with eight or more times redundancy. Over 25 million NFTs are currently stored on NFT.storage and it is used by both OpenSea and Magic Eden. The service is free as the team is committed to NFT metadata as a public good. Work is in progress to build renewal of Filecoin storage deals into smart contracts so there will be no need to trust a centralized entity for renewals.
+[NFT.storage](https://nft.storage/docs/) was created as a public good to archive and persist NFT data. It creates an IPFS CID for your NFT metadata and then makes an automatic deal to store this content persistently on Filecoin with eight or more times redundancy. Over 25 million NFTs are currently stored on NFT.storage and it is used by both OpenSea and Magic Eden. The service is free as the team is committed to NFT metadata as a public good. Work is in progress to build renewal of Filecoin storage deals into smart contracts so there will be no need to trust a centralized entity for renewals.
 
 ### Web3.storage
 
-[comment]: # (TODO: link to Web3.storage docs)
-
-[Web3.storage] (link to docs)  is another project built by IPFS and Filecoin and designed to give you the benefits of decentralized storage and IPFS content addressing with the frictionless experience you expect in a modern storage solution. The service is also free to use and store up to 1 TB of data and compatible with both JavaScript and Go client libraries.
+[Web3.storage](https://web3.storage/docs/)  is another project built by IPFS and Filecoin and designed to give you the benefits of decentralized storage and IPFS content addressing with the frictionless experience you expect in a modern storage solution. The service is also free to use and store up to 1 TB of data and compatible with both JavaScript and Go client libraries.
 
 ### Fleek hosting
 
-[comment]: # (TODO: link to Fleek docs)
-
-[Fleek] (link to Fleek docs) is a CI/CD tool you can use to deploy your apps for free as simply and easily as you would with some of the web2 tools you might be familiar with like Netlify or Vercel. Fleek uses IPFS to host your site or app and even offers ENS domain routing on their platform.
+[Fleek](https://docs.fleek.co/) is a CI/CD tool you can use to deploy your apps for free as simply and easily as you would with some of the web2 tools you might be familiar with like Netlify or Vercel. Fleek uses IPFS to host your site or app and even offers ENS domain routing on their platform.
 
 ## <h2 id="demo"> NFT Demo </h2>
 
 It’s the part we’ve all been waiting for: let’s build something! The tech stack for this demo includes:
 
-[comment]: # (TODO: links to docs for each)
+- [Solidity](https://docs.soliditylang.org/en/v0.8.15/) (via Open Zeppelin smart contracts)
+- [React](https://reactjs.org/docs/getting-started.html) (front end)
+- [Ethers](https://docs.ethers.io/v5/) (React-JS client for web3)
+- [Hardhat](https://hardhat.org/getting-started) (dev tool)
+- [Moralis](https://docs.moralis.io/introduction/readme) (for contract calling & multi-chain deployments)
+- [NFT.Storage](https://nft.storage/docs/) (IPFS CID creation and Filecoin metadata storage)
+- [Fleek](https://docs.fleek.co/) (front-end deployment to the web on IPFS & Filecoin)
+- [MetaMask](https://docs.metamask.io/guide/) (ALWAYS use a NEW Wallet for testing - NEVER use wallets with real assets in them)
+- [Node](https://nodejs.org/en/docs/) installed
 
-- [Solidity] (link) (via Open Zeppelin smart contracts)
-- [React] (link to docs) (front end)
-- [Ethers] (link to docs) (React-JS client for web3)
-- [Hardhat] (link to docs) (dev tool)
-- [Moralis] (link to docs) (for contract calling & multi-chain deployments)
-- [NFT.Storage] (link to docs) (IPFS CID creation and Filecoin metadata storage)
-- [Fleek] (link to docs) (front-end deployment to the web on IPFS & Filecoin)
-- [MetaMask] (link to docs) (ALWAYS use a NEW Wallet for testing - NEVER use wallets with real assets in them)
-- [Node] (link to docs) installed
-
-[comment]: # (TODO: links to GH repos)
-
-The full GitHub code repo is [here] (link to repo). You can view the ReadMe and Quickstart guide here.
+The full GitHub code repo is [here](https://github.com/DeveloperAlly/filecoin-expanded-nft-starter). You can view the ReadMe and Quickstart guide [here](https://github.com/DeveloperAlly/filecoin-expanded-nft-starter/blob/main/README.md).
 
 For this demonstration, we’ve created a small dynamically minted NFT project with the option of using the Open Zeppelin ERC-721 or ERC-1155 smart contract and leveraging NFT.storage; a devtool which does the heavy lifting of IPFS and Filecoin for us and is designed specifically for NFTs. Dynamically minting the NFT just means that we aren’t creating/minting the NFT until the contract is called. This contract call could come from your website front end or in-game logic like a player leveling up or similar. You can deploy these contracts to any EVM-compatible chain including Polygon, AVAX, BSC or, of course, Ethereum.
 
@@ -125,47 +105,29 @@ If you are taking the build it from scratch approach, follow these steps:
 ```npm install dotenv```
 ```touch.env```
 
-[comment]: # (TODO: link to Moralis docs)
+:rocket: Create a server for the smart contracts as per the [Moralis](https://docs.moralis.io/moralis-dapp/getting-started/create-a-moralis-dapp) documentation. We’ve used Moralis so we can deploy to multiple EVM-compatible chains and can use their React hooks. Other options are Chainstack, Alchemy, Infura, and Quicknode.
 
-:rocket: Create a server for the smart contracts as per the [Moralis] (link to docs) documentation. We’ve used Moralis so we can deploy to multiple EVM-compatible chains and can use their React hooks. Other options are Chainstack, Alchemy, Infura, and Quicknode.
+:rocket: Add your .env variables as per [.env.example](https://github.com/DeveloperAlly/filecoin-expanded-nft-starter/blob/main/.env.example) We will add the deployed contract ones later so you can leave these blank for now.
 
-[comment]: # (TODO: add graphic Moralis screenshot)
+:rocket: Create your [hardhat.config](https://hardhat.org/config) file per [hardhat.config.js](https://github.com/DeveloperAlly/filecoin-expanded-nft-starter/blob/main/hardhat.config.js) example.
 
-![Image showing user interface to create a new server on Moralis](https://www.markdownguide.org/assets/images/tux.png)
-
-[comment]: # (TODO: link to GH .env.example)
-
-:rocket: Add your .env variables as per [.env.example] (GH link) We will add the deployed contract ones later so you can leave these blank for now.
-
-[comment]: # (TODO: link to HH config docs & sample hardhat.config.js file)
-
-:rocket: Create your [hardhat.config] (HH config docs link) file per [hardhat.config.js] (HH config example file link from repo) example.
-
-[comment]: # (TODO: link to Remix docs)
-
-:rocket: Time to make our contract and test it on [Remix](link to Remix docs)!
+:rocket: Time to make our contract and test it on [Remix](https://remix-ide.readthedocs.io/en/latest/)!
 
 - In the terminal, install some more dependencies:
 
 ```npm install @openzeppelin/contracts @nomiclabs/hardhat-etherscan```
 
-[comment]: # (TODO: link to OZ docs)
-
-- We don’t need to write a smart contract from scratch when using EVM-compatible chains. We can use a template library provided by [OpenZeppelin] (link to docs) which is security audited and community tested.
+- We don’t need to write a smart contract from scratch when using EVM-compatible chains. We can use a template library provided by [OpenZeppelin](https://docs.openzeppelin.com/) which is security audited and community tested.
 
 A note on ERC standards: The original standard template for NFTs was defined in the Ethereum Improvement Proposal ERC-721. EIPs describe the standards for the Ethereum platform like core protocol specs, client APIs and contract standards. Many chains also have their own versions of Improvement Proposals (like FIP - Filecoin Improvement Proposal). An improvement proposal is "proposed" by the community - this could be core dev's, members of the ecosystem or anyone in the world. The community then discusses this proposal and it then goes through a process of approval which generally includes an auditing review also. ERC's on the other hand are Ethereum Request for Comments. It's a weird name leftover from an original developer draft proposal, that basically means it's related to a specific category of EIPs that work on the application level (ie. it means that it's not a core function of the chain's code and doesn't need to be adopted by all participants).
 
-[comment]: # (TODO: link to EIP1155, link to OZ ERC1155, link to Stack Overflow)
-
-ERC721 is perfectly fine for creating a basic NFT and when this demo was first created - it was the only one available. However, there's recently been a new proposal that is a multi token standard called [EIP1155] (link to EIP1155). This standard proposes the ability to create NFTs and fungible tokens in one contract and adds some cool new features like batch minting to NFTs. While I don't need either of these new features for this demo, I'm choosing to use OpenZeppelin's ERC1155 [template] (link to OZ template) because of the gas optimisations it provides due to it's more efficient method for data storage (see [this] (link to SO) great write up on Eth StackOverflow) and also because who knows where this project might go - maybe we'll want to add fungible tokens at some point?
+ERC721 is perfectly fine for creating a basic NFT and when this demo was first created - it was the only one available. However, there's recently been a new proposal that is a multi token standard called [EIP1155](https://eips.ethereum.org/EIPS/eip-1155). This standard proposes the ability to create NFTs and fungible tokens in one contract and adds some cool new features like batch minting to NFTs. While I don't need either of these new features for this demo, I'm choosing to use OpenZeppelin's ERC1155 [template](https://docs.openzeppelin.com/contracts/3.x/erc1155) because of the gas optimisations it provides due to it's more efficient method for data storage (see [this](https://ethereum.stackexchange.com/questions/113811/does-erc-1155-contract-use-less-gas-to-mint-tokens/113868#113868) great write up on Eth StackOverflow) and also because who knows where this project might go - maybe we'll want to add fungible tokens at some point?
 
 :rocket: create a file for a new Solidity smart contract called FilGoodNFT.sol
 
 :rocket: Import the ERC1155 contract. We’re also going to use a debugger tool from Hardhat that will give us the ability to console.log variables and a counter utility library from OpenZeppelin that will allow us to give the NFTs individual numbers easily
 
-[comment]: # (TODO: add importContractDepends screenshot)
-
-![Image showing code to import contract dependencies into VS Code](https://www.markdownguide.org/assets/images/tux.png)
+![Image showing code to import contract dependencies into VS Code](<https://ipfs.io/ipfs/bafybeibsfviml2aefiq4ngzuyckjiavatbo7vlkm5yl32mv4zslsmpkvnm/importContractDepends.jpg>)
 
 [comment]: # (TODO: link to tokenURI resources)
 

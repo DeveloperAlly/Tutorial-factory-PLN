@@ -157,7 +157,7 @@ If you are taking the build it from scratch approach, follow these steps:
 
 - We don’t need to write a smart contract from scratch when using EVM-compatible chains. We can use a template library provided by [OpenZeppelin] (link to docs) which is security audited and community tested.
 
-A note on ERC standards: The original standard template for NFTs was defined in the Ethereum Improvement Proposal ERC-721. EIPs describe the standards for the Ethereum platform like core protocol specs, client APIs and contract standards. Many chains also have their own versions of Improvement Proposals (like FIP - Filecoin Improvement Proposal). An improvement proposal is "proposed" by the community - this could be core dev's, members of the ecosystem or anyone in the world. The community then discusses this proposal and it then goes through a process of approval which generally includes an auditing review also. ERC's on the other hand are Ethereum Request for Comments. It's a weird name leftover from an original developer draft proposal, that basically means it's related to a specific category of EIPs that work on the application level (ie. it means that it's not a core function of the chain's code and doesn't need to be adopted by all participants). 
+A note on ERC standards: The original standard template for NFTs was defined in the Ethereum Improvement Proposal ERC-721. EIPs describe the standards for the Ethereum platform like core protocol specs, client APIs and contract standards. Many chains also have their own versions of Improvement Proposals (like FIP - Filecoin Improvement Proposal). An improvement proposal is "proposed" by the community - this could be core dev's, members of the ecosystem or anyone in the world. The community then discusses this proposal and it then goes through a process of approval which generally includes an auditing review also. ERC's on the other hand are Ethereum Request for Comments. It's a weird name leftover from an original developer draft proposal, that basically means it's related to a specific category of EIPs that work on the application level (ie. it means that it's not a core function of the chain's code and doesn't need to be adopted by all participants).
 
 [comment]: # (TODO: link to EIP1155, link to OZ ERC1155, link to Stack Overflow)
 
@@ -167,7 +167,75 @@ ERC721 is perfectly fine for creating a basic NFT and when this demo was first c
 
 :rocket: Import the ERC1155 contract. We’re also going to use a debugger tool from Hardhat that will give us the ability to console.log variables and a counter utility library from OpenZeppelin that will allow us to give the NFTs individual numbers easily
 
-```import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
-  import "@openzeppelin/contracts/utils/Counters.sol";
-  import "hardhat/console.sol";```
+[comment]: # (TODO: add importContractDepends screenshot)
 
+![Image showing code to import contract dependencies into VS Code](https://www.markdownguide.org/assets/images/tux.png)
+
+[comment]: # (TODO: link to tokenURI resources)
+
+The ERC1155 contract is missing a tokenURI function out of the box so you will need to override the URI. You can read about how to do this [here] (link) or watch a video [here] (link). You will also want to add a mapping for your TokenURIs.
+
+:rocket: Mapping:
+
+[comment]: # (TODO: add mapping screenshot)
+
+![Image showing code for mapping TokenURI](https://www.markdownguide.org/assets/images/tux.png)
+
+:rocket: TokenURI override:
+
+[comment]: # (TODO: add tokenURIoverride screenshot)
+
+![Image showing code for overriding TokenURI](https://www.markdownguide.org/assets/images/tux.png)
+
+:rocket: Creating NFT Metadata with NFT.Storage
+
+[comment]: # (TODO: add saveToNFTStorage screenshot)
+
+![Image showing code for creating NFT metadata with NFT.Storage](https://www.markdownguide.org/assets/images/tux.png)
+
+:rocket: For ease of flow I suggest testing your contracts on Remix first. You can also import Solidity debuggers into your IDE of choice.
+
+:rocket: Now we can create our deploy scripts and deploy our contracts to live networks! Let's head back to the terminal.
+
+```
+cd scripts
+touch deploy.js
+npx hardhat run --network NETWORK scripts/deploy.js
+```
+
+Note: NETWORK = localhost or any in the config file
+
+:rocket: Verify our deployed contract (for Etherscan networks - ie Goerli, Ropsten, Ethereum mainnet)
+
+```
+npx hardhat verify –network NETWORK DEPLOYED_CONTRACT_ADDRESS
+```
+Note: NETWORK = localhost or any in the config file; DEPLOYED_CONTRACT_ADDRESS = the blockchain address of your deployed contract
+
+## IPFS & Filecoin: Resources & Getting Involved
+
+[comment]: # (TODO: link to resources in these two sections)
+
+### Learn
+
+- Proto.school
+- NFTschool.dev
+- Docs
+- YouTube
+
+### Contributions & Grants
+
+- Hackathons.filecoin.io
+- Grants (microgrants, project grants, bounties)
+- Projects and repos are open source
+
+### Join the Community
+
+- Ambassador program (Orbit community program)
+- Protocol Labs Launchpad (for those looking to become part of the business ecosystem)
+
+### Get in touch! 
+
+- Ally Haire: Developer Advocate [Twitter] (<https://twitter.com/DeveloperAlly>)
+
+- Dawn Kelly: Developer Advocate [Twitter] (<https://twitter.com/run4pancakes>)

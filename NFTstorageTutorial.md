@@ -32,7 +32,7 @@ Founded in 2013 by Juan Benet, Protocol Labs is a fully distributed open-source 
 
 [comment]: # (TODO: infographic showing same CID = same content)
 
-![Infographic showing relationship between CID and data content](https://www.markdownguide.org/assets/images/tux.png)
+![Infographic showing relationship between CID and data content](https://ipfs.io/ipfs/bafybeicf5damu4pubbt5du2ljixkvv4ybetmdf5nnnkhuvpityj26jf7ya/CIDcontent.jpg)
 
 It’s worth taking a moment to talk a bit more here about Content Ids (CIDs). IPFS takes content and uses SHA-256 cryptography to create a deterministic hash representation of that data. In simple terms, changing one character or pixel of that saved data would create a completely new CID. In practice, this means you can be assured a CID match means you are getting back the data you expected and it remains immutable. You can see why this is desirable for use cases like NFTs where value is derived from authenticity and uniqueness.
 

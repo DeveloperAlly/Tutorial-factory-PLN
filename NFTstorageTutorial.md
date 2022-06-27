@@ -236,6 +236,6 @@ Note: NETWORK = localhost or any in the config file; DEPLOYED_CONTRACT_ADDRESS =
 
 ### Get in touch! 
 
-- Ally Haire: Developer Advocate [Twitter] (<https://twitter.com/DeveloperAlly>)
+- Ally Haire: Developer Advocate [Twitter](<https://twitter.com/DeveloperAlly>)
 
-- Dawn Kelly: Developer Advocate [Twitter] (<https://twitter.com/run4pancakes>)
+- Dawn Kelly: Developer Advocate [Twitter](<https://twitter.com/run4pancakes>)

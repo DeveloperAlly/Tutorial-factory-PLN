@@ -12,29 +12,32 @@ This workshop will provide a brief introduction to IPFS and Filecoin. We will th
 
 TL; DR: If you are already familiar with IPFS & Filecoin, you can jump straight to the coding demo [here](#demo)
 
-First, let’s clear up any confusion that may be out there around a few names you’ve probably heard floating around the web3 ecosystem and how they fit together. You have probably heard of Protocol Labs, IPFS, Filecoin, and the Filecoin Foundation. Many times these names are used interchangeably and, while they are all tightly affiliated, they are all actually separate organizations.
+First, let’s clear up any confusion that may be out there around a few names you’ve probably heard floating around the web3 ecosystem and how they fit together. You have probably heard of Protocol Labs, IPFS, Filecoin, and the Filecoin Foundation.
 
 ![Infographic showing relationships between Protocol Labs, Filecoin Foundation, Filecoint, & IPFS](https://ipfs.io/ipfs/bafybeibix67vqxoama6ekiy4mmex67pdf5p63c2jwxzgss5p4sf7src7ai/PLrelationships.jpg)
 
 ### Protocol Labs
 
-Founded in 2013 by Juan Benet, Protocol Labs is a fully distributed open-source R&D organization which builds protocols, tools, and services aimed at helping to radically improve the internet and drive breakthroughs in computing to help move humanity forward. These are some big goals for sure and, luckily, some truly powerhouse people are working to help drive this research and mission.
+Founded in 2013 by Juan Benet, Protocol Labs is a fully distributed open-source Research & Development organization which builds protocols, tools, and services aimed at helping to radically improve the internet and drive breakthroughs in computing to help move humanity forward. These are some big goals for sure and, luckily, some truly powerhouse people are working to help drive this research and mission together with our talented and passionate ecosystem teams.
 
 ### IPFS (InterPlanetary File System)
 
-[IPFS](https://docs.filecoin.io/) is more than just a cool, futuristic name. As a distributed, peer to peer network for files and folders, it was designed to be able to work even when the network is between planets! IPFS uses cryptography to address content by what it is instead of where it is. This creates the ability to retrieve content from the peer closest to you. If we were all hanging out in our shiny, new Mars colony, we could request files from each other quickly rather than waiting for signals to travel to centralized servers back on Earth and then back to us. IPFS is distributed and decentralized by design , has no central authority servers for censorship resistance, is designed to be offline first for resilience, and provides trustless verifiability of stored data through cryptographic hashes called Content IDs (CIDs).
+[IPFS](https://docs.filecoin.io/) is more than just a cool, futuristic name. As a distributed, peer to peer network for files and folders, it was designed to be able to work even when the network is between planets! IPFS uses cryptography to address content by what it is instead of where it is. This creates the ability to retrieve content from the peer closest to you. If we were all hanging out in our shiny, new Mars colony, we could request files from each other quickly rather than waiting for signals to travel to centralized servers back on Earth and then back to us. Recently we've even partnered with [Lockheed Martin to launch an IPFS node in space too!](https://thedefiant.io/filecoin-ipfs-space/)
+
+IPFS is distributed and decentralized by design, has no central authority servers for censorship resistance, is designed to be offline first for resilience, and provides trustless verifiability of stored data through cryptographic hashes called Content IDs (CIDs).
 
 ![Infographic showing relationship between CID and data content](https://ipfs.io/ipfs/bafybeicf5damu4pubbt5du2ljixkvv4ybetmdf5nnnkhuvpityj26jf7ya/CIDcontent.jpg)
 
-It’s worth taking a moment to talk a bit more here about Content Ids (CIDs). IPFS takes content and uses SHA-256 cryptography to create a deterministic hash representation of that data. In simple terms, changing one character or pixel of that saved data would create a completely new CID. In practice, this means you can be assured a CID match means you are getting back the data you expected and it remains immutable. You can see why this is desirable for use cases like NFTs where value is derived from authenticity and uniqueness.
+It’s worth taking a moment to talk a bit more here about Content Ids (CIDs). IPFS takes content and uses SHA-256 cryptography to create a deterministic hash representation of that data - which you can think of like a cryptographic fingerprint of the content. Changing even one character or pixel of that  data content would create a completely new CID. In practice, this means you can be assured a CID match means you are getting back the data you expected and that it remains immutable, giving you verifiability and trustless sharing capabilities. This simple shift to content-based addressing rather than the location-based addressing we are accustomed to on the web today, opens up technology spaces to massively distributed data syetems. When you can verify WHAT content is, then you don't need to care WHERE that content is coming from. 
+You can see why this is desirable for use cases like NFTs where value is derived from authenticity and verifiable uniqueness, and it's not just important for NFTs either, being able to verify and trust what data is, means that you can trust transactions between actors that may not inherently trust each other otherwise, such as sending information between different countries satellites, for example.
 
 ### Filecoin
 
-A peer to peer network is only useful if you have a healthy number of distributed peers to participate in storing and sharing data. Most people require an incentive to participate in this type of structure. Filecoin is designed to leverage a crypto-economic incentive model together with cryptographic proofs in order to ensure data is stored persistently, reliably, and verifiably across a distributed network. Its use of cryptographic proofs also enables smart-contract based permanence, and means that it is designed to be as permanent as you, the data owner, want it to be. Whether that permanence requirement is for 500 years or 5 minutes, you have total control over the timeframe you want for your storage and how many copies of it you want to ensure for resilience.
+IPFS is a robust and unique peer to peer network where participants can run their own nodes to store and share files and folders. However, as with all peer to peer systems, persistence of that data is not guaranteed, because unless content is popular, or you are running your own highly available IPFS nodes or you are paying for a pinning service to store your content (which introduces a centralisation paradigm we are trying to remove in dweb), IPFS content can become unretrievable by the network. This is where the decentralised storage netowrk of Filecoin comes in as a complementary part of the decentralised data stack. Filecoin is designed to leverage a crypto-economic incentive model together with cryptographic proofs in order to ensure data is stored persistently, reliably, and verifiably across a distributed network. Its use of cryptographic proofs also enables smart-contract based permanence, and means that it is designed to be as permanent as you, the data owner, want it to be. Whether that permanence requirement is for 500 years or 5 minutes, you have total control over the timeframe you want for your storage and how many copies of it you want to ensure for resilience, and the introduction of the [Filecoin Virtual Machine (FVM)](https://fvm.filecoin.io) at the end of 2022 will further enable smarter storage contracts and automated dealmaking in the system as well as a vast array of new use cases.
 
 ### Filecoin Foundation
 
-The Filecoin [Foundation](https://fil.org/) is the steward of the Filecoin community, aspiring to put the power of humanity’s most important information back into the hands of everyone. The foundation provides resources, guidance, and fair, equitable principles to help the ecosystem flourish, and to open up the internet for a safer, stronger, and more reliable environment where everyone can thrive.
+The Filecoin [Foundation](https://fil.org/) is the steward of the Filecoin community, aspiring to put the power of humanity’s most important information back into the hands of everyone and making sure they are doing so in a decentralised way. The foundation provides resources, guidance, and fair, equitable principles to help the ecosystem flourish, and to open up the internet for a safer, stronger, and more reliable environment where everyone can thrive.
 
 ## NFT Use Case
 
@@ -42,13 +45,19 @@ Whether you want to use the ERC-721 token standard, or the more recently release
 
 ![Image showing sample Open Zeppelin ERC721 contract](https://ipfs.io/ipfs/bafybeieosegiifyat7srdathtbhluvcxz7wh4zyzrh44qplugl6qzrgwre/OZERC721.jpg)
 
-The main function we want to look at here is the mint and setTokenURI functions though. If we look at this example contract implementation, we can see that this contract creates a numbered ID GameItem for a player (with a wallet address) and takes a tokenURI (or Universal resource identifier) as a parameter. This is where it gets interesting, because the tokenURI is simply a JSON object containing the unique characteristics of the NFT - Thor’s hammer in this example.
+The main function we want to look at here is the mint and setTokenURI functions though. If we look at this example contract implementation, we can see that this contract creates a numbered ID GameItem for a player (with a wallet address) and takes a tokenURI (or Universal Resource Identifier) as a parameter. This is where it gets interesting, because the tokenURI is simply a JSON file containing the unique characteristics of the NFT - Thor’s hammer in this example.
 
 ![Image showing tokenURI JSON document](https://ipfs.io/ipfs/bafybeihc24s6y3jzixgzf7auhp22uwoalrwgylrscwaixjkl6xqtbxxosu/ThorHammer.jpg)
 
-What’s important is that we really want to ensure that our metadata conforms to the characteristics we’re looking for in our NFT - particularly its non-fungibility and uniqueness . So where and how we save this metadata is an important consideration.
+What’s important is that we really want to ensure that our metadata conforms to the characteristics we’re looking for in our NFT - particularly its non-fungibility and uniqueness. So where and how we save this metadata is an important consideration.
 
-There are three main options to save this NFT metadata. 1) You can save it on-chain via the contract itself. This can get prohibitively expensive on higher gas fee chains, particularly for larger files like images, music or video files. 2) You can use a http address to fetch the NFT properties, as shown with the image address in the JSON object above. There are unfortunately multiple issues with this approach. One is that we are relying on someone to continue to pay for this storage. We are also relying on this http address always resolving to the same data. If someone wants to change this data and has access to this server, our non-fungible property will be lost. 3) This brings us to the third option. You can save this metadata as an IPFS CID and store it on Filecoin. This approach guarantees verifiable immutability of your NFT metadata to give your holders peace of mind.
+There are three main options to save this NFT metadata. 
+
+1) You can save it on-chain via the contract itself. This is definitely a great way to ensure the immuatbility and persistence of your NFT's metadata. The downside it - this method of storage can get prohibitively expensive on higher gas fee chains, particularly for larger files like music, video or 3D files. 
+
+2) You can save it off-chain, using a http address to fetch the NFT properties, as shown with the image address in the JSON example above. There are unfortunately multiple issues with this approach. One is that we are relying on someone to continue to pay for this storage in order to create persistent storage of our NFT metadata. The second is that we are relying on location-addressing, meaning we are just hoping that this http address will always resolve to the same data. If someone wants to change this content and has access to this server, however, our non-fungible property is now lost. 
+
+3) This brings us to the third option. You can save this metadata as an IPFS CID (for immutability) and store it on Filecoin (for permanence). This approach guarantees verifiable immutability and persistance of your NFT metadata and is the reason you will see warnings in all good NFT tutorials (and even on Open Zeppelin) to use this approach when not storing on-chain.
 
 ## IPFS & Filecoin: DevTools
 
@@ -56,28 +65,29 @@ Now you know why you want to store your NFT metadata using IPFS and Filecoin but
 
 ### NFT.storage
 
-[NFT.storage](https://nft.storage/docs/) was created as a public good to archive and persist NFT data. It creates an IPFS CID for your NFT metadata and then makes an automatic deal to store this content persistently on Filecoin with eight or more times redundancy. Over 25 million NFTs are currently stored on NFT.storage and it is used by both OpenSea and Magic Eden. The service is free as the team is committed to NFT metadata as a public good. Work is in progress to build renewal of Filecoin storage deals into smart contracts so there will be no need to trust a centralized entity for renewals.
+[NFT.storage](https://nft.storage/docs/) was created as a public good to archive and persist NFT data. It creates an IPFS CID for your NFT metadata and then makes an automatic deal to store this content persistently on Filecoin with eight or more times redundancy. Over 65 million NFTs are currently stored on NFT.storage and it is used by both OpenSea and Magic Eden - so has become a standard of the NFT industry. The service is free as the team is committed to storing NFT metadata the right way for all NFT holders. You can even back up your NFT metadata to NFT.Storage if you have some expensive or valued pieces you want to store.
 
 ### Web3.storage
 
-[Web3.storage](https://web3.storage/docs/)  is another project built by IPFS and Filecoin and designed to give you the benefits of decentralized storage and IPFS content addressing with the frictionless experience you expect in a modern storage solution. The service is also free to use and store up to 1 TB of data and compatible with both JavaScript and Go client libraries.
+[Web3.storage](https://web3.storage/docs/) is another project built by IPFS and Filecoin and designed to give you the benefits of decentralized storage and IPFS content addressing with the frictionless experience you expect in a modern storage solution. The service is also free to use and store up to 1 TB of data and compatible with both JavaScript and Go client libraries. Try this one out if you have data other then NFT metadata you want to immutably & persistently store.
 
 ### Fleek hosting
 
-[Fleek](https://docs.fleek.co/) is a CI/CD tool you can use to deploy your apps for free as simply and easily as you would with some of the web2 tools you might be familiar with like Netlify or Vercel. Fleek uses IPFS to host your site or app and even offers ENS domain routing on their platform.
+[Fleek](https://docs.fleek.co/) is a CI/CD tool you can use to deploy your static apps for free as simply and easily as you would with some of the web2 tools you might be familiar with like Netlify or Vercel. Fleek uses IPFS to host your site or app and then backs this up with Filecoin stroage deals. It even offers ENS domain routing on their platform.
 
 ## <h2 id="demo"> NFT Demo </h2>
 
 It’s the part we’ve all been waiting for: let’s build something! The tech stack for this demo includes:
 
-- [Solidity](https://docs.soliditylang.org/en/v0.8.15/) (via Open Zeppelin smart contracts)
+- [Solidity](https://docs.soliditylang.org/en/v0.8.15/) (ethereum programming language)
+- [Open Zeppelin]() (audited ethereum contract templates)
 - [React](https://reactjs.org/docs/getting-started.html) (front end)
-- [Ethers](https://docs.ethers.io/v5/) (React-JS client for web3)
-- [Hardhat](https://hardhat.org/getting-started) (dev tool)
-- [Moralis](https://docs.moralis.io/introduction/readme) (for contract calling & multi-chain deployments)
+- [Ethers](https://docs.ethers.io/v5/) (React-JS client for interacting with EVM-compatible blockchains)
+- [Hardhat](https://hardhat.org/getting-started) (a dev tool for contract development and deployment)
+- [Moralis](https://docs.moralis.io/introduction/readme) (for multi-chain deployments and node interactions)
 - [NFT.Storage](https://nft.storage/docs/) (IPFS CID creation and Filecoin metadata storage)
 - [Fleek](https://docs.fleek.co/) (front-end deployment to the web on IPFS & Filecoin)
-- [MetaMask](https://docs.metamask.io/guide/) (ALWAYS use a NEW Wallet for testing - NEVER use wallets with real assets in them)
+- [MetaMask](https://docs.metamask.io/guide/) (An in-broswer wallet. ALWAYS use a NEW Wallet for testing - NEVER use wallets with real assets in them)
 - [Node](https://nodejs.org/en/docs/) installed
 
 The full GitHub code repo is [here](https://github.com/DeveloperAlly/filecoin-expanded-nft-starter). You can view the ReadMe and Quickstart guide [here](https://github.com/DeveloperAlly/filecoin-expanded-nft-starter/blob/main/README.md).
